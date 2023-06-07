@@ -7,117 +7,16 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  background-color: white;
   transition: all 0.3 ease;
+}
+* body {
+  background-color: white;
 }
 * a {
   text-decoration: none;
 }
 
 /*Formateo de estilo*/
-/* selectores */
-/* etiquetas */
-/* .class */
-/* #id */
-/*variables ejemplo
-$border-cajas: 2px solid red;
-.clase{
-  border: $border-cajas;
-}
-*/
-/* header/barra de navegación */
-.navbar {
-  background-color: rgb(247, 247, 166) !important;
-  font-size: 18px !important;
-}
-.navbar .img-logo {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-
-/* colores de links */
-a:link {
-  color: green;
-}
-
-footer a:link {
-  color: white;
-}
-
-a:visited {
-  color: green;
-}
-
-a:hover {
-  color: rgb(8, 197, 8);
-}
-
-a:active {
-  color: orangered !important;
-}
-
-/* */
-.icon {
-  orientation: inline-block;
-  width: 30px;
-  height: 30px;
-}
-
-.video-principal {
-  margin-left: 130px;
-}
-
-/*Banner fallido*/
-div h1 {
-  color: green;
-  font-size: 35px;
-  text-shadow: 3px 5px 5px rgb(9, 206, 9);
-  margin: 20px auto;
-}
-
-.slogan {
-  position: absolute;
-  top: 250px;
-  left: 420px;
-  width: 650px;
-  background-color: none;
-}
-
-#boton-menu {
-  background-color: green;
-  color: white;
-  font-size: 22px;
-  width: 85px;
-  height: 40px;
-  border: 5px rgb(6, 151, 54) outset;
-  border-radius: 7px;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: inset;
-  position: absolute;
-  top: 350px;
-  left: 670px;
-}
-
-#boton-menu:hover { /*para usar en imagenes trancition sobre*/
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
-}
-
-/*sección 1 Index*/
-.section-make {
-  display: inline-flex;
-  gap: 50px;
-  margin-top: 60px;
-  margin-bottom: 80px;
-}
-
-/*sección 2 Index*/
-.section-menu {
-  margin-top: 30px;
-  gap: 50px;
-}
-
 /* footer */
 .pie {
   background-color: green;
@@ -170,6 +69,112 @@ footer ul { /* cambia a blanco si no se establece color */
   background-color: green;
 }
 
+/*Footer*/
+/* header/barra de navegación */
+.navbar {
+  background-color: rgb(247, 247, 166) !important;
+  font-size: 18px !important;
+}
+.navbar .img-logo {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+/*Header*/
+/* selectores */
+/* etiquetas */
+/* .class */
+/* #id */
+/*variables ejemplo
+$border-cajas: 2px solid red;
+.clase{
+  border: $border-cajas;
+}
+*/
+/* colores de links */
+a:link {
+  color: green;
+}
+
+footer a:link {
+  color: white;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: rgb(8, 197, 8);
+}
+
+a:active {
+  color: orangered !important;
+}
+
+/* */
+.icon {
+  orientation: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.video-principal {
+  margin-left: 130px;
+}
+
+/*Banner fallido*/
+div h1 {
+  color: green;
+  font-size: 30px;
+  text-shadow: 3px 5px 5px rgb(9, 206, 9);
+  margin: 20px auto;
+}
+
+.slogan {
+  position: absolute;
+  margin-bottom: 50px;
+  font-size: 2.4vw; /*Texto responsive*/
+  width: 800px;
+}
+
+#boton-menu {
+  position: absolute;
+  margin-top: 90px;
+  background-color: green;
+  color: white;
+  font-size: 22px;
+  width: 85px;
+  height: 40px;
+  border: 5px rgb(6, 151, 54) outset;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: inset;
+}
+
+#boton-menu:hover { /*para usar en imagenes trancition sobre*/
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*sección 1 Index*/
+.section-make {
+  display: inline-flex;
+  gap: 50px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+/*sección 2 Index*/
+.section-menu {
+  margin-top: 30px;
+  gap: 50px;
+}
+.section-menu .text-card {
+  font-size: 3vw; /*Texto responsive*/
+}
+
 /*FAQs*/
 .container-faqs {
   margin-top: 30px;
@@ -182,43 +187,40 @@ footer ul { /* cambia a blanco si no se establece color */
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 3;
-  grid-template-areas: "contenido-nosotros contenido-nosotros contenido-nosotros sidebar" "contenido-nosotros contenido-nosotros contenido-nosotros sidebar" "we-1 we-1 we-1 sidebar";
+  grid-template-rows: 4;
+  grid-template-areas: "contenido-nosotros contenido-nosotros contenido-nosotros sidebar" "contenido-nosotros contenido-nosotros contenido-nosotros sidebar" "we-1 we-1 we-1 sidebar" "video-principal video-principal video-principal video-principal";
 }
-
-.contenido-nosotros {
+.contenedor-we .contenido-nosotros {
   grid-area: contenido-nosotros;
 }
-
-.sidebar {
+.contenedor-we .sidebar {
   grid-area: sidebar;
 }
-
-.we-1 {
+.contenedor-we .we-1 {
   grid-area: we-1;
 }
-
-.img-we-1 {
+.contenedor-we .video-principal {
+  grid-area: video-principal; /*video no aplica el responsive*/
+}
+.contenedor-we .img-we-1 {
   width: 500px;
   height: auto;
   padding-left: 50px;
 }
-
-.img-aside-we {
+.contenedor-we .img-aside-we {
   width: auto;
   height: 500px;
 }
 
-/*no funciona*/
+/*sistema responsive*/
 @media (max-width: 768px) {
-  .contenedor-nosotros {
-    grid-template-areas: "we-1 we-1 we-1 we-1" "contenido-nosotros contenido-nosotros contenido-nosotros contenido-nosotros" "sidebar sidebar sidebar sidebar";
+  .contenedor-we {
+    grid-template-areas: "we-1 we-1 we-1 we-1" "contenido-nosotros contenido-nosotros contenido-nosotros contenido-nosotros" "sidebar sidebar sidebar sidebar" "video-principal video-principal video-principal video-principal";
   }
 }
 /*formulario contacto falta hacer responsive*/
 .contenido-contacto {
   width: 500px;
-  margin-left: 420px;
   margin-top: 50px;
   border: 1px solid grey;
   padding: 8px;
@@ -231,6 +233,11 @@ footer ul { /* cambia a blanco si no se establece color */
 .contenido-contacto .form-style {
   background-color: rgba(247, 123, 22, 0.877);
   color: white;
+}
+
+.video-contacto {
+  margin-top: 50px;
+  margin-left: 90px;
 }
 
 /*Página menú*/
