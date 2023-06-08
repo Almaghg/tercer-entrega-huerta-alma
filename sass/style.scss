@@ -23,8 +23,7 @@ a:link{
   color: green;
   }
 
-a:visited{
-color: green;  
+a:visited{  
 }
 
 a:hover {
@@ -135,10 +134,13 @@ div h1{
 }
 }
 
-/*formulario contacto falta hacer responsive*/
-.contenido-contacto {
-  width: 500px;
+/*Página contacto falta hacer responsive*/
+.sec-contacto{
+  justify-content: space-evenly;
+  align-items: center;
   margin-top: $margin-top-section;
+.contenido-contacto {
+  width: 500px;  
   border: 1px solid grey;
   padding: 8px;
   border-radius: 7px;
@@ -151,9 +153,9 @@ div h1{
     color: white;
   }
 }
+}
 .video-contacto{
-  margin-top: 50px;
-  margin-left: 90px;
+  
 }
 
 /*FAQs*/
