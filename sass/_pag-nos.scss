@@ -3,7 +3,7 @@
     width: 90%;
     margin: 30px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 15px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 4;
     grid-template-areas:  "contenido-nosotros contenido-nosotros contenido-nosotros sidebar"
@@ -12,17 +12,27 @@
                           "video-principal video-principal video-principal video-principal";
     .contenido-nosotros{
       grid-area: contenido-nosotros;
+      
       text-align: justify;
+      padding: 5px;
     }
     .sidebar{
       grid-area: sidebar;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .we-1{
       grid-area: we-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .video-principal{
-      grid-area: video-principal; /*video no aplica el responsive*/
-      margin-left: 130px;
+      grid-area: video-principal; 
+      display: flex;
+      justify-content: center;
+      align-content: center;
     } 
     .img-we-1{
       width: 500px;

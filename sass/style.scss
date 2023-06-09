@@ -23,9 +23,6 @@ a:link{
   color: green;
   }
 
-a:visited{  
-}
-
 a:hover {
 color: rgb(8, 197, 8);
 }
@@ -49,24 +46,24 @@ height: auto;
 
 /*Banner*/
 .hero{
-  display: flex;
+  /*display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
-  height: 90vh;
-  /*background-image: linear-gradient(
+  flex-direction: column; posicionamiento
+  linear-gradient(
     0deg,
     rgb(0, 0, 5),
-    rgb(0, 0, 0),
-  )   No funciona gradiente */
+    rgb(0, 0,0),
+  )       No funciona el filtro para el banner */ 
+  height: 90vh;
   background-image: 
   url("../assets/imagenes/mesa-comida.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   .slogan {
-    font-size: 3vw; /*Texto responsive*/
+    font-size: 2.7em; 
     width: 800px;
    }
    #boton-menu{
@@ -87,7 +84,8 @@ height: auto;
 
 div h1{
   color: green;
-  text-shadow: 3px 5px 5px rgb(9, 206, 9);
+  text-shadow: 2px 2px 2px rgb(9, 206, 9);
+  margin-bottom: 50px;
 }
 
 #boton-menu:hover{ /*para usar en imagenes trancition sobre*/
@@ -118,7 +116,7 @@ div h1{
 
 /*Página menú*/
 .section-menu{
-  gap: 15px;
+  gap: 25px;
 .card-menu{ 
   width: 200px !important; 
   height: auto !important;
@@ -131,6 +129,9 @@ div h1{
 }
 .btn-success{
   margin-bottom: 0px !important; /*No se alinean los botones*/
+}
+.card-img-menu:hover{
+  transform: scale(1.5,1.5);
 }
 }
 
@@ -154,9 +155,24 @@ div h1{
   }
 }
 }
-.video-contacto{
-  
+
+/*sistema responsive no funciona del todo*/
+@media only screen and (max-width: 768px) {
+  .sec-contacto{
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+  }
+  .contenido-contacto {
+    width: 80%;
+    margin: auto;
+    order: -2;
+  }
+  .video-contacto {
+    order: -1;
+  }
 }
+
 
 /*FAQs*/
 .container-faqs{

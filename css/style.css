@@ -10,7 +10,7 @@
   transition: all 0.3 ease;
 }
 * body {
-  background-color: white;
+  background-color: rgba(245, 244, 244, 0.849);
 }
 * a {
   text-decoration: none;
@@ -23,6 +23,7 @@ footer {
   width: 100%;
   height: 300px;
   margin-top: 100px;
+  background-image: linear-gradient(rgb(13, 175, 21), rgb(38, 145, 11), green);
 }
 footer .pie {
   display: flex;
@@ -73,7 +74,7 @@ footer a, footer p, footer li, footer a:link {
   width: 90%;
   margin: 30px;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 15px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 4;
   grid-template-areas: "contenido-nosotros contenido-nosotros contenido-nosotros sidebar" "contenido-nosotros contenido-nosotros contenido-nosotros sidebar" "we-1 we-1 we-1 sidebar" "video-principal video-principal video-principal video-principal";
@@ -81,16 +82,25 @@ footer a, footer p, footer li, footer a:link {
 .contenedor-we .contenido-nosotros {
   grid-area: contenido-nosotros;
   text-align: justify;
+  padding: 5px;
 }
 .contenedor-we .sidebar {
   grid-area: sidebar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .contenedor-we .we-1 {
   grid-area: we-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .contenedor-we .video-principal {
-  grid-area: video-principal; /*video no aplica el responsive*/
-  margin-left: 130px;
+  grid-area: video-principal;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 .contenedor-we .img-we-1 {
   width: 500px;
@@ -145,24 +155,24 @@ footer a:link {
 
 /*Banner*/
 .hero {
-  display: flex;
+  /*display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
-  height: 90vh;
-  /*background-image: linear-gradient(
+  flex-direction: column; posicionamiento
+  linear-gradient(
     0deg,
     rgb(0, 0, 5),
-    rgb(0, 0, 0),
-  )   No funciona gradiente */
+    rgb(0, 0,0),
+  )       No funciona el filtro para el banner */
+  height: 90vh;
   background-image: url("../assets/imagenes/mesa-comida.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .hero .slogan {
-  font-size: 3vw; /*Texto responsive*/
+  font-size: 2.7em;
   width: 800px;
 }
 .hero #boton-menu {
@@ -182,7 +192,8 @@ footer a:link {
 
 div h1 {
   color: green;
-  text-shadow: 3px 5px 5px rgb(9, 206, 9);
+  text-shadow: 2px 2px 2px rgb(9, 206, 9);
+  margin-bottom: 50px;
 }
 
 #boton-menu:hover { /*para usar en imagenes trancition sobre*/
@@ -213,7 +224,7 @@ div h1 {
 
 /*Página menú*/
 .section-menu {
-  gap: 15px;
+  gap: 25px;
 }
 .section-menu .card-menu {
   width: 200px !important;
@@ -228,6 +239,9 @@ div h1 {
 }
 .section-menu .btn-success {
   margin-bottom: 0px !important; /*No se alinean los botones*/
+}
+.section-menu .card-img-menu:hover {
+  transform: scale(1.5, 1.5);
 }
 
 /*Página contacto falta hacer responsive*/
@@ -251,6 +265,22 @@ div h1 {
   color: white;
 }
 
+/*sistema responsive no funciona del todo*/
+@media only screen and (max-width: 768px) {
+  .sec-contacto {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+  }
+  .contenido-contacto {
+    width: 80%;
+    margin: auto;
+    order: -2;
+  }
+  .video-contacto {
+    order: -1;
+  }
+}
 /*FAQs*/
 .container-faqs {
   margin-top: 30px;
