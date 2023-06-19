@@ -21,19 +21,21 @@
 footer {
   background-color: green;
   width: 100%;
-  height: 300px;
+  height: auto;
   margin-top: 100px;
   background-image: linear-gradient(rgb(13, 175, 21), rgb(38, 145, 11), green);
 }
 footer .pie {
   display: flex;
   width: 100%;
+  height: auto;
   justify-content: space-evenly;
   align-items: flex-start;
   padding-top: 60px;
 }
 footer .contact {
   width: 150px;
+  padding-left: 2rem;
 }
 footer .nav-footer {
   width: 150px;
@@ -56,6 +58,15 @@ footer a, footer p, footer li, footer a:link {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+/*sistema responsive*/
+@media (max-width: 768px) {
+  .pie {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 33%;
+    gap: 25px;
+  }
+}
 /*Footer*/
 /* header/barra de navegación */
 .navbar {
@@ -66,6 +77,10 @@ footer a, footer p, footer li, footer a:link {
   width: 100px;
   height: 100px;
   cursor: pointer;
+}
+
+.navbar-nav {
+  margin-left: 30% !important;
 }
 
 /*Header*/
@@ -155,29 +170,36 @@ footer a:link {
 
 /*Banner*/
 .hero {
-  /*display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column; posicionamiento
-  linear-gradient(
-    0deg,
-    rgb(0, 0, 5),
-    rgb(0, 0,0),
-  )       No funciona el filtro para el banner */
+  flex-direction: column; /*posicionamiento
+/*linear-gradient(
+  0deg,
+  rgb(0, 0, 5),
+  rgb(0, 0,0),
+)       No funciona el filtro para el banner */
   height: 90vh;
   background-image: url("../assets/imagenes/mesa-comida.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  filter: brightness(80%);
+  transition: all 0.2s ease-in-out;
+  height: 85vh;
+  animation: banner 18s infinite linear;
 }
 .hero .slogan {
-  font-size: 2.7em;
-  width: 800px;
+  font-size: 4.5vw;
+  width: 75%;
+  color: green;
+  text-shadow: 2px 2px 2px rgb(9, 206, 9);
+  margin-bottom: 50px;
 }
 .hero #boton-menu {
   position: absolute;
-  margin-top: 150px;
+  margin-top: 180px;
   background-color: green;
   color: white;
   font-size: 22px;
@@ -190,12 +212,26 @@ footer a:link {
   box-shadow: inset;
 }
 
-div h1 {
-  color: green;
-  text-shadow: 2px 2px 2px rgb(9, 206, 9);
-  margin-bottom: 50px;
+@keyframes banner {
+  0% {
+    background-image: url("../assets/imagenes/mesa-comida.webp");
+  }
+  33% {
+    background-image: url("../assets/imagenes/mesa-comida.webp");
+  }
+  34% {
+    background-image: url("../assets/imagenes/mesa-blanca-bolsa.jpg");
+  }
+  66% {
+    background-image: url("../assets/imagenes/mesa-blanca-bolsa.jpg");
+  }
+  67% {
+    background-image: url("../assets/imagenes/mesa-madera-plato.jpg");
+  }
+  100% {
+    background-image: url("../assets/imagenes/mesa-madera-plato.jpg");
+  }
 }
-
 #boton-menu:hover { /*para usar en imagenes trancition sobre*/
   box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
 }
@@ -214,12 +250,12 @@ div h1 {
   gap: 50px;
 }
 .section-menu .text-card {
-  font-size: 2vw; /*Texto responsive*/
+  font-size: 1.7vw; /*Texto responsive*/
 }
 .section-menu .img-menu {
   cursor: pointer;
   box-shadow: 5px 5px 10px;
-  border-radius: 40px;
+  border-radius: 20px;
 }
 
 /*Página menú*/
@@ -244,14 +280,14 @@ div h1 {
   transform: scale(1.5, 1.5);
 }
 
-/*Página contacto falta hacer responsive*/
+/*Página contacto*/
 .sec-contacto {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 30px;
 }
 .sec-contacto .contenido-contacto {
-  width: 500px;
+  width: 23rem;
   border: 1px solid grey;
   padding: 8px;
   border-radius: 7px;
@@ -265,19 +301,26 @@ div h1 {
   color: white;
 }
 
-/*sistema responsive no funciona del todo*/
-@media only screen and (max-width: 768px) {
+.video-contacto {
+  width: 350px;
+}
+
+/*sistema responsive*/
+@media (max-width: 768px) {
   .sec-contacto {
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    width: 100%;
     height: 100vh;
   }
   .contenido-contacto {
-    width: 80%;
-    margin: auto;
+    width: 70%;
+    height: auto;
     order: -2;
   }
   .video-contacto {
+    width: 70%;
+    height: auto;
     order: -1;
   }
 }

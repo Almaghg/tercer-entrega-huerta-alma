@@ -42,16 +42,14 @@ width: 30px;
 height: auto;
 }
 
-
-
 /*Banner*/
 .hero{
-  /*display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column; posicionamiento
-  linear-gradient(
+  flex-direction: column; /*posicionamiento
+  /*linear-gradient(
     0deg,
     rgb(0, 0, 5),
     rgb(0, 0,0),
@@ -62,13 +60,20 @@ height: auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  filter: brightness(80%);
+  transition: all .2s ease-in-out;
+  height: 85vh;
+  animation: banner 18s infinite linear;
   .slogan {
-    font-size: 2.7em; 
-    width: 800px;
+    font-size: 4.5vw; 
+    width: 75%;
+    color: green;
+    text-shadow: 2px 2px 2px rgb(9, 206, 9);
+    margin-bottom: 50px;
    }
    #boton-menu{
     position: absolute;
-    margin-top: 150px;
+    margin-top: 180px;
     background-color: green;
     color:white;
     font-size: 22px;
@@ -82,11 +87,27 @@ height: auto;
     }
 }
 
-div h1{
-  color: green;
-  text-shadow: 2px 2px 2px rgb(9, 206, 9);
-  margin-bottom: 50px;
+@keyframes banner{
+  0% {
+    background-image: url("../assets/imagenes/mesa-comida.webp"); 
+  }
+  33% {
+    background-image: url("../assets/imagenes/mesa-comida.webp"); 
+  }
+  34% {
+    background-image: url("../assets/imagenes/mesa-blanca-bolsa.jpg"); 
+  }
+  66% {
+    background-image: url("../assets/imagenes/mesa-blanca-bolsa.jpg"); 
+  }
+  67% {
+    background-image: url("../assets/imagenes/mesa-madera-plato.jpg"); 
+  }
+  100% {
+    background-image: url("../assets/imagenes/mesa-madera-plato.jpg"); 
+  }
 }
+
 
 #boton-menu:hover{ /*para usar en imagenes trancition sobre*/
   box-shadow: 10px 10px rgba(0,0,0,.3);
@@ -100,17 +121,18 @@ div h1{
   margin-bottom: 80px;
 }
 
+
 /*sección 2 Index*/
 .section-menu {
   margin-top: $margin-top-section;
   gap: 50px;
 .text-card{
-  font-size: 2vw; /*Texto responsive*/
+  font-size: 1.7vw; /*Texto responsive*/
 } 
 .img-menu{
   cursor: pointer;
   box-shadow: 5px 5px 10px;
-  border-radius: 40px; 
+  border-radius: 20px; 
   }
 }
 
@@ -135,13 +157,13 @@ div h1{
 }
 }
 
-/*Página contacto falta hacer responsive*/
+/*Página contacto*/
 .sec-contacto{
   justify-content: space-evenly;
   align-items: center;
   margin-top: $margin-top-section;
 .contenido-contacto {
-  width: 500px;  
+  width: 23rem;  
   border: 1px solid grey;
   padding: 8px;
   border-radius: 7px;
@@ -156,19 +178,26 @@ div h1{
 }
 }
 
-/*sistema responsive no funciona del todo*/
-@media only screen and (max-width: 768px) {
+.video-contacto{
+  width: 350px;
+}
+
+/*sistema responsive*/
+@media (max-width: 768px) {
   .sec-contacto{
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    width: 100%;
     height: 100vh;
   }
   .contenido-contacto {
-    width: 80%;
-    margin: auto;
+    width: 70%;
+    height: auto;
     order: -2;
   }
   .video-contacto {
+    width: 70%;
+    height: auto;
     order: -1;
   }
 }
