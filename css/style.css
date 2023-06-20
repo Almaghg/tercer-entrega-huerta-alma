@@ -62,8 +62,9 @@ footer a, footer p, footer li, footer a:link {
 @media (max-width: 768px) {
   .pie {
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 0px 33%;
+    padding-left: 15%;
     gap: 25px;
   }
 }
@@ -193,7 +194,7 @@ footer a:link {
 .hero .slogan {
   font-size: 4.5vw;
   width: 75%;
-  color: green;
+  color: white;
   text-shadow: 2px 2px 2px rgb(9, 206, 9);
   margin-bottom: 50px;
 }
@@ -205,7 +206,7 @@ footer a:link {
   font-size: 22px;
   width: 85px;
   height: 40px;
-  border: 5px rgb(6, 151, 54) outset;
+  border: 7px rgb(6, 151, 54) outset;
   border-radius: 7px;
   text-align: center;
   cursor: pointer;
@@ -226,10 +227,10 @@ footer a:link {
     background-image: url("../assets/imagenes/mesa-blanca-bolsa.jpg");
   }
   67% {
-    background-image: url("../assets/imagenes/mesa-madera-plato.jpg");
+    background-image: url("../assets/imagenes/mesa-madera-pasta.jpg");
   }
   100% {
-    background-image: url("../assets/imagenes/mesa-madera-plato.jpg");
+    background-image: url("../assets/imagenes/mesa-madera-pasta.jpg");
   }
 }
 #boton-menu:hover { /*para usar en imagenes trancition sobre*/
@@ -247,7 +248,7 @@ footer a:link {
 /*sección 2 Index*/
 .section-menu {
   margin-top: 30px;
-  gap: 50px;
+  gap: 85px;
 }
 .section-menu .text-card {
   font-size: 1.7vw; /*Texto responsive*/
@@ -287,7 +288,7 @@ footer a:link {
   margin-top: 30px;
 }
 .sec-contacto .contenido-contacto {
-  width: 23rem;
+  width: 21rem;
   border: 1px solid grey;
   padding: 8px;
   border-radius: 7px;
@@ -314,7 +315,7 @@ footer a:link {
     height: 100vh;
   }
   .contenido-contacto {
-    width: 70%;
+    width: 40%;
     height: auto;
     order: -2;
   }

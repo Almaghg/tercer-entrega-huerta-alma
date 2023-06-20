@@ -67,7 +67,7 @@ height: auto;
   .slogan {
     font-size: 4.5vw; 
     width: 75%;
-    color: green;
+    color: white;
     text-shadow: 2px 2px 2px rgb(9, 206, 9);
     margin-bottom: 50px;
    }
@@ -79,7 +79,7 @@ height: auto;
     font-size: 22px;
     width: 85px;
     height: 40px;
-    border: 5px rgb(6, 151, 54) outset;
+    border: 7px rgb(6, 151, 54) outset;
     border-radius: 7px;
     text-align: center;
     cursor: pointer;
@@ -101,10 +101,10 @@ height: auto;
     background-image: url("../assets/imagenes/mesa-blanca-bolsa.jpg"); 
   }
   67% {
-    background-image: url("../assets/imagenes/mesa-madera-plato.jpg"); 
+    background-image: url("../assets/imagenes/mesa-madera-pasta.jpg"); 
   }
   100% {
-    background-image: url("../assets/imagenes/mesa-madera-plato.jpg"); 
+    background-image: url("../assets/imagenes/mesa-madera-pasta.jpg"); 
   }
 }
 
@@ -125,7 +125,7 @@ height: auto;
 /*sección 2 Index*/
 .section-menu {
   margin-top: $margin-top-section;
-  gap: 50px;
+  gap: 85px;
 .text-card{
   font-size: 1.7vw; /*Texto responsive*/
 } 
@@ -163,7 +163,7 @@ height: auto;
   align-items: center;
   margin-top: $margin-top-section;
 .contenido-contacto {
-  width: 23rem;  
+  width: 21rem;  
   border: 1px solid grey;
   padding: 8px;
   border-radius: 7px;
@@ -191,7 +191,7 @@ height: auto;
     height: 100vh;
   }
   .contenido-contacto {
-    width: 70%;
+    width: 40%;
     height: auto;
     order: -2;
   }
