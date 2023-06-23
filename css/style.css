@@ -75,8 +75,9 @@ footer a, footer p, footer li, footer a:link {
   font-size: 18px !important;
 }
 .navbar .img-logo {
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
+  margin-left: 15px;
   cursor: pointer;
 }
 
@@ -135,6 +136,51 @@ footer a, footer p, footer li, footer a:link {
   }
 }
 /*Page Nosotros*/
+/*Página contacto*/
+.sec-contacto {
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+.sec-contacto .contenido-contacto {
+  width: 21rem;
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 7px;
+  background-color: rgba(247, 123, 22, 0.877);
+}
+.sec-contacto .contenido-contacto .form-control {
+  border: 1px solid grey;
+}
+.sec-contacto .contenido-contacto .form-style {
+  background-color: rgba(247, 123, 22, 0.877);
+  color: white;
+}
+
+.video-contacto {
+  width: 350px;
+}
+
+/*sistema responsive*/
+@media (max-width: 768px) {
+  .sec-contacto {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .contenido-contacto {
+    width: 40%;
+    height: auto;
+    order: -2;
+  }
+  .video-contacto {
+    width: 70%;
+    height: auto;
+    order: -1;
+  }
+}
+/*Page Contacto*/
 /* selectores */
 /* etiquetas */
 /* .class */
@@ -175,12 +221,7 @@ footer a:link {
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column; /*posicionamiento
-/*linear-gradient(
-  0deg,
-  rgb(0, 0, 5),
-  rgb(0, 0,0),
-)       No funciona el filtro para el banner */
+  flex-direction: column;
   height: 90vh;
   background-image: url("../assets/imagenes/mesa-comida.webp");
   background-repeat: no-repeat;
@@ -281,50 +322,6 @@ footer a:link {
   transform: scale(1.5, 1.5);
 }
 
-/*Página contacto*/
-.sec-contacto {
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 30px;
-}
-.sec-contacto .contenido-contacto {
-  width: 21rem;
-  border: 1px solid grey;
-  padding: 8px;
-  border-radius: 7px;
-  background-color: rgba(247, 123, 22, 0.877);
-}
-.sec-contacto .contenido-contacto .form-control {
-  border: 1px solid grey;
-}
-.sec-contacto .contenido-contacto .form-style {
-  background-color: rgba(247, 123, 22, 0.877);
-  color: white;
-}
-
-.video-contacto {
-  width: 350px;
-}
-
-/*sistema responsive*/
-@media (max-width: 768px) {
-  .sec-contacto {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-  }
-  .contenido-contacto {
-    width: 40%;
-    height: auto;
-    order: -2;
-  }
-  .video-contacto {
-    width: 70%;
-    height: auto;
-    order: -1;
-  }
-}
 /*FAQs*/
 .container-faqs {
   margin-top: 30px;
