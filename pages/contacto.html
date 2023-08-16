@@ -82,9 +82,9 @@
               >Nombre</label
             >
             <input
-              type="email"
+              type="text"
               class="form-control"
-              id="exampleFormControlInput1"
+              id="inputName"
               placeholder="Nombre"
             />
           </div>
@@ -97,7 +97,7 @@
             <input
               type="email"
               class="form-control"
-              id="exampleFormControlInput1"
+              id="inputMail"
               placeholder="name@example.com"
             />
           </div>
@@ -109,16 +109,19 @@
             >
             <textarea
               class="form-control"
-              id="exampleFormControlTextarea1"
+              id="inputComentario"
               rows="3"
             ></textarea>
           </div>
         </article>
-        <div class="video-contacto">
+
+        <button class="enviar" id="enviarFormulario">Enviar</button>
+
+        <!-- <div class="video-contacto">
           <video class="" autoplay width="100%" height="auto">
             <source src="../assets/media/video-relajate.mp4" type="video/mp4" />
           </video>
-        </div>
+        </div> -->
       </section>
     </main>
 
@@ -162,6 +165,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>src="main.js"</script>
     <script>
       AOS.init();
     </script>
